@@ -92,16 +92,15 @@
         self.titleLabel.text = @"Circle Chart";
 
         
-        self.circleChart = [[PNCircleChart alloc] initWithFrame:CGRectMake(0, 80.0, SCREEN_WIDTH, 100.0)
+        self.circleChart = [[PNCircleChart alloc] initWithFrame:CGRectMake(0, 135.0, SCREEN_WIDTH, 100.0)
                                                                      total:@100
                                                                    current:@60
                                                                  clockwise:YES
                                                                     shadow:YES];
         self.circleChart.backgroundColor = [UIColor clearColor];
         [self.circleChart setStrokeColor:PNGreen];
-        [self.circleChart setStrokeColorGradientStart:[UIColor blueColor]];
+        [self.circleChart setStrokeColorGradientStart:PNBlue];
         [self.circleChart strokeChart];
-        
         [self.view addSubview:self.circleChart];
     }
     else if ([self.title isEqualToString:@"Pie Chart"])
